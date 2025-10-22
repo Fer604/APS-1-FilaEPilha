@@ -1,19 +1,23 @@
 public class Pilha {
     private Node topo;
 
-    public void push(Elemento elemento) throws Exception {
+    public void push(Elemento elemento) {
+
         if (elemento == null) {
-            throw new Exception("Elemento inválido");
+            System.out.println("Elemento inválido");
         }
+
         Node novoNode = new Node(elemento);
         novoNode.proximo = topo;
         topo = novoNode;
     }
 
-    public Elemento remover() throws Exception {
+    public Elemento remover() {
+
         if (estaVazia()) {
-            throw new Exception("A pilha está vazia");
+            System.out.println("A pilha está vazia");
         }
+
         Elemento elementoRemovido = topo.valor;
         topo = topo.proximo;
         return elementoRemovido;
@@ -24,6 +28,7 @@ public class Pilha {
     }
 
     public void mostrarHistorico() {
+
         if (estaVazia()) {
             System.out.println("Histórico vazio");
             return;
