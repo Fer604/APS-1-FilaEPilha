@@ -24,6 +24,7 @@ bin/
 
 ### VS Code ###
 .vscode/
+remove_later/
 
 ### Mac OS ###
 .DS_Store
